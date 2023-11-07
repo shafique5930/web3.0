@@ -1,5 +1,4 @@
 // Question 2
-// . Personal Message: Store a person’s name in a variable, and print a message to that person. Your message should be simple, such as, “Hello Eric,would you like to learn some Python today?”
 const hr = '*'.repeat(70)
 let PersonalName = 'Muhammad Shafique'
 console.log(hr)
@@ -7,7 +6,6 @@ console.log('Question No. 2:')
 console.log(`Hello ${PersonalName},would you like to learn some Python today?`)
 console.log(hr)
 // Question 3
-// 3. Name Cases: Store a person’s name in a variable, and then print that person’s name in lowercase, uppercase, and titlecase.
 let Myname = 'muhammad Imran'
 console.log('Question No. 3:')
 console.log(Myname.toUpperCase())

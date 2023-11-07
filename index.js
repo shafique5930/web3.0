@@ -177,7 +177,24 @@ for (i in countries) {
   console.log(countries[i]);
 }
 console.log(hr);
-
+// Question 23
+console.log("Question 23");
+let car = "subaru";
+console.log(`Is car == 'sabaru'? I predict True.`);
+console.log(car == "subaru");
+let myName = "Muhammad  Shafique";
+console.log(`Is Name == 'Muhammad Shafique'? I predict False.`);
+console.log(myName == "Muhammad Shafique");
+let grade = "b";
+console.log(`Is grade === 'B'? I predict True.`);
+console.log(grade === "B");
+let marks = "80%" ? true : false;
+console.log("Is marks == 50%, i predict false");
+console.log(marks == "50%");
+let [w, y] = [10, 20];
+console.log("w>y, I predict False");
+console.log(w > y);
+console.log(hr);
 // Question 25, 26 & 27
 console.log("Question 25, 26 & 27");
 const PointsDetector = (AlienColor = "") => {

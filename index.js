@@ -177,26 +177,23 @@ for (i in countries) {
   console.log(countries[i]);
 }
 console.log(hr);
-// Question 25
-console.log("Question No. 25 :");
-let AlienColor = "red";
-if (AlienColor == "green") {
-  console.log("The player have just earned 5 points");
-}
-AlienColor = "Green";
-if (AlienColor == "green") {
-  console.log("The player have just earned 5 points");
-} else {
-  console.log("The player have just earned 10 points");
-}
 
-if (AlienColor == "green") {
-  console.log("The player have just earned 5 points");
-} else if (AlienColor == "Yellow") {
-  console.log("The player have just earned 10 points");
-} else if (AlienColor == "Red") {
-  console.log("The player have just earned 15 points");
-}
+// Question 25, 26 & 27
+console.log("Question 25, 26 & 27");
+const PointsDetector = (AlienColor = "") => {
+  AlienColor = AlienColor.toLowerCase();
+  if (AlienColor == "green") {
+    console.log("The player have just earned 5 points for shooting the alien");
+  } else if (AlienColor == "yellow") {
+    console.log("The player have just earned 10 points for shooting the alien");
+  } else if (AlienColor == "red") {
+    console.log("The player have just earned 15 points for shooting the alien");
+  } else {
+    console.log("The player have just earned 10 points for shooting the alien");
+  }
+  //  Question 27
+};
+PointsDetector("GREEN");
 console.log(hr);
 // Question 28
 console.log("Question No. 28 :");
@@ -276,63 +273,72 @@ console.log(hr);
 // Question 33
 console.log("Question No.33 :");
 const ordinalNumber = [];
-for (i = 1; i <= 9; i++) {
-  ordinalNumber.push(i);
-}
-for (num in ordinalNumber) {
-  if (ordinalNumber[num] <= 2) {
-    console.log(`${ordinalNumber[num]}st`);
-  } else if (ordinalNumber[num] == 3) {
-    console.log(`${ordinalNumber[num]}rd`);
-  } else {
-    console.log(`${ordinalNumber[num]}th`);
+const OrdinalNumberPrint = (...arr) => {
+  for (i = 1; i <= 9; i++) {
+    arr.push(i);
   }
-}
+  for (num in arr) {
+    if (arr[num] <= 2) {
+      console.log(`${arr[num]}st`);
+    } else if (arr[num] == 3) {
+      console.log(`${arr[num]}rd`);
+    } else {
+      console.log(`${arr[num]}th`);
+    }
+  }
+};
+OrdinalNumberPrint(ordinalNumber);
 console.log(hr);
 // Question 34
 console.log("Question No. 34:");
 const pizzaVariety = ["Chicken Tikka", "Fajita", "Smoky Grill"];
-for (pizza in pizzaVariety) {
-  console.log(pizzaVariety[pizza]);
-}
-// Question 35
-for (pizza in pizzaVariety) {
-  console.log(`I like ${pizzaVariety[pizza]} pizza flavour`);
-}
-console.log(
-  "I like pizza and i mostly visits Cheezious pizza \n for best and delicious pizza. They have many variety \nand flavours and i really loved their pizza"
-);
+const pizzaDetail = (arr) => {
+  for (pizza in arr) {
+    console.log(arr[pizza]);
+  }
+  // Question 35
+  for (pizza in arr) {
+    console.log(`I like ${arr[pizza]} pizza flavour`);
+  }
+  console.log(
+    "I like pizza and i mostly visits Cheezious pizza \n for best and delicious pizza. They have many variety \nand flavours and i really loved their pizza"
+  );
+};
+pizzaDetail(pizzaVariety);
 console.log(hr);
 // Question 36
 console.log("Question No.36 :");
 const animals = ["Dog", "Cat", "Rabbit"];
-console.log("Names of Animals:");
-for (let i = 0; i < animals.length; i++) {
-  console.log(animals[i]);
-}
-console.log("\nStatements about Animals:");
-for (let i = 0; i < animals.length; i++) {
-  console.log(`A ${animals[i]} would make a great pet.`);
-}
-console.log("\nWhat these animals have in common:");
-console.log("Any of these animals would make a great pet!");
+const animalNames = () => {
+  console.log("Names of Animals:");
+  for (let i = 0; i < animals.length; i++) {
+    console.log(animals[i]);
+  }
+  console.log("\nStatements about Animals:");
+  for (let i = 0; i < animals.length; i++) {
+    console.log(`A ${animals[i]} would make a great pet.`);
+  }
+  console.log("\nWhat these animals have in common:");
+  console.log("Any of these animals would make a great pet!");
+};
+animalNames();
 console.log(hr);
 // Question 36
 console.log("Question No.36 :");
-function make_shirt(size, textMsg) {
+const make_shirt_customize = (size, textMsg) => {
   return `Hello sir your shirt size is ${size} and your desired message is "${textMsg}"`;
-}
-console.log(make_shirt("Large", "I love Pakistan!"));
+};
+console.log(make_shirt_customize("Large", "I love Pakistan!"));
 console.log(hr);
 // Question 37
 console.log("Question No.37 :");
-function make_shirt(size = "Large" && "Medium", textMsg) {
+const make_shirt = (size = "Large" && "Medium", textMsg) => {
   if (size == "Large" || size == "Medium") {
     return `Hello sir your shirt size is ${size} and your desired message is "I love TypeScript"`;
   } else {
     return `Hello sir your shirt size is ${size} and your desired message is "${textMsg}"`;
   }
-}
+};
 console.log(make_shirt("Large", "I love Pakistan!"));
 console.log(
   make_shirt("small", "Type script is a great programming Language!")
@@ -340,9 +346,9 @@ console.log(
 console.log(hr);
 // Question 38
 console.log("Question No. 38 :");
-function describe_city(city, country = "Pakistan") {
+const describe_city = (city, country = "Pakistan") => {
   return `${city} is in ${country}`;
-}
+};
 console.log(describe_city("Multan"));
 console.log(describe_city("Faisalabad"));
 console.log(describe_city("New York", "USA"));
@@ -356,7 +362,7 @@ console.log(city_country("Islamabad", "Pakistan"));
 console.log(hr);
 // Question 40
 console.log("Question No.40 :");
-function make_album(artist, title, tracks) {
+const make_album = (artist, title, tracks) => {
   let album = {
     artist: artist,
     title: title,
@@ -366,7 +372,7 @@ function make_album(artist, title, tracks) {
   }
 
   return album;
-}
+};
 let album1 = make_album("Artist1", "Album 1");
 let album2 = make_album("Artist2", "Album 2", 4);
 let album3 = make_album("Artist3", "Album 3");

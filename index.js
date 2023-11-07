@@ -11,7 +11,7 @@ let Myname = "muhammad Imran";
 console.log("Question No. 3:");
 console.log(Myname.toUpperCase());
 console.log(Myname.toLowerCase());
-function titleCase(string) {
+let titleCase = (string) => {
   return string
     .toLowerCase()
     .split(" ")
@@ -19,7 +19,7 @@ function titleCase(string) {
       (a, x) => a + "" + (x.charAt(0).toUpperCase() + x.slice(1) + " "),
       ""
     );
-}
+};
 console.log(titleCase(Myname));
 console.log(hr);
 // Question 4
@@ -49,7 +49,6 @@ console.log(16 / 2);
 console.log(hr);
 // Question 8
 console.log("Question No. 8:");
-
 console.log(sepeartor);
 console.log("console.log(5+3)");
 console.log(sepeartor);
@@ -84,24 +83,27 @@ console.log(hr);
 console.log("Question No. 13:");
 const myTpt = ["Honda M/C"];
 const myHondaList = ["I would like to drive Honda M/C", "I love Honda M/C"];
-for (tpt in myTpt) {
-  console.log(myTpt[tpt]);
-  for (list in myHondaList) {
-    console.log(myHondaList[list]);
+const displayTptList = () => {
+  for (tpt in myTpt) {
+    console.log(myTpt[tpt]);
+    for (list in myHondaList) {
+      console.log(myHondaList[list]);
+    }
   }
-}
+};
+displayTptList();
 console.log(hr);
 // Question 14
 console.log("Question No. 14:");
 const guestList = ["Muhammad", "Aiman", "Bushra"];
-function sendInvitations() {
+const sendInvitations = () => {
   for (invitee in guestList) {
     console.log(
       `Dear ${guestList[invitee]}, i would like to invite you on occassion of annual dinner at my farmhouse located at ..`
     );
     console.log(sepeartor);
   }
-}
+};
 sendInvitations();
 console.log(hr);
 console.log("Question No. 15:");
@@ -161,8 +163,8 @@ console.log(hr);
 console.log("Question No. 19 :");
 console.log(`I am inviting total ${guestList.length}x guests`);
 console.log(hr);
+// Question 20
 console.log("Question No. 20 :");
-
 let countries = [
   "United States",
   "Canada",
@@ -172,7 +174,6 @@ let countries = [
   "Japan",
   "Australia",
 ];
-console.log("List of Countries:");
 for (i in countries) {
   console.log(countries[i]);
 }
@@ -191,9 +192,14 @@ console.log(grade === "B");
 let marks = "80%" ? true : false;
 console.log("Is marks == 50%, i predict false");
 console.log(marks == "50%");
-let [w, y] = [10, 20];
-console.log("w>y, I predict False");
+let [w, y] = [30, 20];
+console.log("w>y, I predict True");
 console.log(w > y);
+let [cars, bikes] = ["Honda Civic", "Yamaha YBR Z"];
+console.log("I predict True");
+console.log(cars == "Honda Civic" || bikes == "Yamaha YBR Z");
+console.log("I predict False");
+console.log(cars == "Honda Civic" && bikes == "Yamaha YBR");
 console.log(hr);
 // Question 25, 26 & 27
 console.log("Question 25, 26 & 27");

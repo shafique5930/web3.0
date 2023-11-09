@@ -177,6 +177,7 @@ let countries = [
 for (i in countries) {
   console.log(countries[i]);
 }
+
 console.log(hr);
 // Question 23
 console.log("Question 23");
@@ -219,21 +220,22 @@ const PointsDetector = (AlienColor = "") => {
 PointsDetector("GREEN");
 console.log(hr);
 // Question 28
-console.log("Question No. 28 :");
 const PersonStage = (personStage) => {
-  if (personStage <= 2) {
+  if (personStage < 2) {
     console.log("the person is a baby");
-  } else if (personStage == 4 && personStage < 13) {
-    console.log("the person is a kids");
-  } else if (personStage == 13 && personStage < 20) {
+  } else if (personStage == 2 || personStage < 4) {
+    console.log("the person is a toddler");
+  } else if (personStage == 4 || personStage < 13) {
+    console.log("the person is a kid");
+  } else if (personStage == 13 || personStage < 20) {
     console.log("The person is a teenager");
-  } else if (personStage == 20 && personStage < 65) {
+  } else if (personStage == 20 || personStage < 65) {
     console.log("The person is an adult");
   } else if (personStage >= 65) {
     console.log("The person is an elder");
   }
 };
-PersonStage(65);
+PersonStage(5);
 console.log(hr);
 
 // Question 29
@@ -301,11 +303,13 @@ const OrdinalNumberPrint = (...arr) => {
     arr.push(i);
   }
   for (num in arr) {
-    if (arr[num] <= 2) {
+    if (arr[num] == 1) {
       console.log(`${arr[num]}st`);
+    } else if (arr[num] == 2) {
+      console.log(`${arr[num]}nd`);
     } else if (arr[num] == 3) {
       console.log(`${arr[num]}rd`);
-    } else {
+    } else if (arr[num] > 3 && arr[num] <= 9) {
       console.log(`${arr[num]}th`);
     }
   }
